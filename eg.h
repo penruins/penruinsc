@@ -15,3 +15,11 @@ void eg052();
 void eg053();
 void eg054();
 void cyclicSwap(int *a, int *b, int *c);
+/**
+ * 搜索字符串中的字符
+ */
+void eg055();
+void eg056();
+void eg057();
+void eg058();
+void eg059();

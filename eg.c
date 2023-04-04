@@ -2,6 +2,7 @@
 // Created by liuxiang37 on 2022/1/25.
 //
 #include <stdio.h>
+#include <string.h>
 #include "cjson/cJSON.h"
 void eg001() {
     printf("\n--------------------eg001----------------------\n");
@@ -178,6 +179,49 @@ void eg054() {
     cJSON_AddItemToObject(root, "service", cJSON_CreateString("telephone"));
 
     printf("%s\n", cJSON_Print(root));
+}
+void eg055() {
+    printf("\n--------------------eg055----------------------\n");
+    const char str[] = "you dont give up, then there's no limitation";
+    const char ch = 'n';
+    char *ret;
+    ret = (char*) memchr(str, ch, strlen(str));
+    // n 也返回了
+    printf("%s", ret); // nt give up, then there's no limitation
+}
+void eg056() {
+    printf("\n--------------------eg056----------------------\n");
+    char str1[15];
+    char str2[15];
+
+    int ret;
+
+    memcpy(str1, "abcdef", 6);
+    memcpy(str2, "ABCDEF", 6);
+
+    ret = memcmp(str1, str2, 5);
+    printf("\n%d", ret);
+}
+void eg057() {
+    printf("\n--------------------eg057----------------------\n");
+
+    const char src[50] = "http://www.runoob.com";
+    char dest[50];
+
+    memcpy(dest, src, strlen(src)+1);
+    printf("dest = %s\n", dest);
+}
+void eg058() {
+    printf("\n--------------------eg058----------------------\n");
+    char *s = "http://www.runoob.com";
+    char d[20];
+    memcpy(d, s+11, 6);
+    d[6] = '\0';
+    printf("%s", d);
+}
+void eg059() {
+
+
 }
 
 
